@@ -10,7 +10,7 @@ public class Review {
 
     private String text;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name="rating")//, referencedColumnName = "id"
     private Rating rating;
 
@@ -20,8 +20,7 @@ public class Review {
 
     }
 
-    public Review(Integer id, String text, Rating rating, Integer idSTO) {
-        this.id = id;
+    public Review(String text, Rating rating, Integer idSTO) {
         this.text = text;
         this.rating = rating;
         this.idSTO = idSTO;

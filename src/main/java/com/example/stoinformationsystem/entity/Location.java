@@ -16,8 +16,7 @@ public class Location {
     private String buildingNumb;
     private String town;
 
-    public Location(Integer id, String district, String streetName, String buildingNumb, String town) {
-        this.id = id;
+    public Location(String district, String streetName, String buildingNumb, String town) {
         this.district = district;
         this.streetName = streetName;
         this.buildingNumb = buildingNumb;

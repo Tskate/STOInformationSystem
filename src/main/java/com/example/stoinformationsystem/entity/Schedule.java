@@ -9,8 +9,8 @@ public class Schedule {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
 
-    @OneToOne(mappedBy = "weekdayShedule")
-    private STO sto;
+//    @OneToOne(mappedBy = "weekdayShedule")
+//    private STO sto;
     private LocalTime startTime;
     private LocalTime endTime;
     private LocalTime startBreakeTime;
@@ -22,8 +22,7 @@ public class Schedule {
 
     }
 
-    public Schedule(Integer id, LocalTime startTime, LocalTime endTime, LocalTime startBreakeTime, LocalTime endBreakeTime, LocalTime startTimeWeekend, LocalTime endTimeWeekend) {
-        this.id = id;
+    public Schedule(LocalTime startTime, LocalTime endTime, LocalTime startBreakeTime, LocalTime endBreakeTime, LocalTime startTimeWeekend, LocalTime endTimeWeekend) {
         this.startTime = startTime;
         this.endTime = endTime;
         this.startBreakeTime = startBreakeTime;

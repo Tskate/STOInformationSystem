@@ -39,12 +39,10 @@ public class STO {
 
     }
 
-    public STO(Integer id, String name, String description, Schedule weekdayShedule, Schedule weekendShedule, ServiceInfo serviceInfo, List<Location> location, List<Review> reviews, Integer count) {
-        this.id = id;
+    public STO(String name, String description, Schedule weekdayShedule, ServiceInfo serviceInfo, List<Location> location, List<Review> reviews, Integer count) {
         this.name = name;
         this.description = description;
         this.weekdayShedule = weekdayShedule;
-        //this.weekendShedule = weekendShedule;
         this.serviceInfo = serviceInfo;
         this.location = location;
         this.reviews = reviews;
@@ -117,6 +115,7 @@ public class STO {
 
     public void setReviews(List<Review> reviews) {
         this.reviews = reviews;
+
     }
 
     public Integer getCount() {

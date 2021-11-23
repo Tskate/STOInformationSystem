@@ -21,8 +21,7 @@ public class AuthorizedUser {
 
     }
 
-    public AuthorizedUser(Integer id, String login, String password, String name, List<Review> reviews) {
-        this.id = id;
+    public AuthorizedUser(String login, String password, String name, List<Review> reviews) {
         this.login = login;
         this.password = password;
         this.name = name;
