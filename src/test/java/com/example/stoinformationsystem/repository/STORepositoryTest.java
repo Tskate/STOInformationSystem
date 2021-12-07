@@ -39,7 +39,7 @@ public class STORepositoryTest {
 
     @Test
     public void deleteReview() throws Exception {
-        Review rev = reviewRepository.getById(11);
+        Review rev = reviewRepository.getById(13);
         reviewRepository.delete(rev);
 
         List<Rating> rating = ratingRepository.findAll();

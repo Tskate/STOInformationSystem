@@ -59,6 +59,7 @@ public class InformationSystemApplication implements CommandLineRunner {
 //          Review rev = new Review();
 //          rev.setRating(rat);
 //          reviewRepository.save(rev);
+//          reviewRepository.save(rev);
 //          List<Review> revs = List.of(rev);
 //          sto.setReviews(revs);     ????????
 

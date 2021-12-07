@@ -1,7 +1,7 @@
 package com.example.stoinformationsystem.entity;
 
 import javax.persistence.*;
-import java.util.List;
+
 
 @Entity
 public class ServiceInfo {
@@ -30,15 +30,6 @@ public class ServiceInfo {
     public void setId(Integer id) {
         this.id = id;
     }
-
-//    public STO getSto() {
-//        return sto;
-//    }
-//
-//    public void setSto(STO sto) {
-//        this.sto = sto;
-//    }
-
 
     public String getBrands() {
         return brands;

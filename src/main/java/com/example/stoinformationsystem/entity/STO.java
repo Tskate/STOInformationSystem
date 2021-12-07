@@ -16,10 +16,6 @@ public class STO {
     @JoinColumn(name="weekdayShedule", referencedColumnName = "id")
     private Schedule weekdayShedule;
 
-//    @OneToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name="weekendShedule", referencedColumnName = "id")
-//    private Schedule weekendShedule;
-
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="serviceInfo_id", referencedColumnName = "id")
     private ServiceInfo serviceInfo;
