@@ -1,8 +1,6 @@
 package com.example.stoinformationsystem.repository;
 
-import com.example.stoinformationsystem.entity.Rating;
-import com.example.stoinformationsystem.entity.Review;
-import com.example.stoinformationsystem.entity.STO;
+import com.example.stoinformationsystem.entity.*;
 import org.junit.runner.RunWith;
 //import org.junit.jupiter.api.Test;
 import org.junit.Test;
@@ -46,5 +44,11 @@ public class STORepositoryTest {
         assertThat(rating).hasSize(0);
     }
 
+//    @Test
+//    public void getTotalBenefits(){
+//        STORepository sto = new OnlyService(new STOImpl());
+//        assertThat(sto.getTotalBenefits()).isEqualTo("Particular qualities: Only Service, without tire fitting.");
+//
+//    }
 
 }

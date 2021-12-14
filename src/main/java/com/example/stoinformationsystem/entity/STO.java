@@ -1,10 +1,12 @@
 package com.example.stoinformationsystem.entity;
 
+import com.example.stoinformationsystem.repository.STORepository;
+
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
-public class STO {
+public class STO{
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
@@ -117,4 +119,5 @@ public class STO {
     public Integer getCount() {
         return count;
     }
+
 }

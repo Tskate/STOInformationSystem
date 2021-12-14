@@ -11,7 +11,7 @@ import java.util.List;
 
 public interface STORepository extends JpaRepository<STO, Integer> {
     List<STO> findByName(String name);
-
+    String getTotalBenefits();
 
 
 }
