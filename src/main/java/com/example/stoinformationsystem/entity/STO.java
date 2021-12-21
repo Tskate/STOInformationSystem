@@ -1,12 +1,14 @@
 package com.example.stoinformationsystem.entity;
 
+import com.example.stoinformationsystem.repository.Collection;
+import com.example.stoinformationsystem.repository.Iterator;
 import com.example.stoinformationsystem.repository.STORepository;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
-public class STO{
+public class STO implements Collection {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
@@ -29,6 +31,24 @@ public class STO{
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name="reviews_sto")
     private List<Review> reviews;
+
+
+    public class ReviewIterator implements Iterator {
+        int index = 0;
+
+        @Override
+        public boolean hasNext() {
+            if (index < reviews.size()) {
+                return true;
+            }
+            return false;
+        }
+
+        @Override
+        public Object next() {
+            return reviews.get(index++);
+        }
+    }
 
     private Integer count;
 
@@ -83,14 +103,6 @@ public class STO{
         this.weekdayShedule = weekdayShedule;
     }
 
-//    public Schedule getWeekendShedule() {
-//        return weekendShedule;
-//    }
-//
-//    public void setWeekendShedule(Schedule weekendShedule) {
-//        this.weekendShedule = weekendShedule;
-//    }
-
     public ServiceInfo getServiceInfo() {
         return serviceInfo;
     }
@@ -120,4 +132,8 @@ public class STO{
         return count;
     }
 
+    @Override
+    public Iterator getIterator() {
+        return new ReviewIterator();
+    }
 }

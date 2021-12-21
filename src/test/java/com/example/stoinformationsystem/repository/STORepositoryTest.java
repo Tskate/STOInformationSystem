@@ -29,10 +29,10 @@ public class STORepositoryTest {
 
     @Test
     public void findByName() throws Exception{
-       List<STO> sto_list = stoRepository.findByName("Автоцентр");
+       List<STO> sto_list = stoRepository.findByName("CarService");
 
        assertThat(sto_list).hasSize(1);
-       assertThat(sto_list.get(0).getId()).isEqualTo(1);
+       assertThat(sto_list.get(0).getId()).isEqualTo(15);
     }
 
     @Test
@@ -42,6 +42,17 @@ public class STORepositoryTest {
 
         List<Rating> rating = ratingRepository.findAll();
         assertThat(rating).hasSize(0);
+    }
+
+    @Test
+    public void IteratorTest() throws Exception {
+        STO sto =  stoRepository.getById(15);
+        Iterator iterator = sto.getIterator();
+
+        System.out.println(sto.getName() + " list reviews: ");
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
     }
 
 //    @Test

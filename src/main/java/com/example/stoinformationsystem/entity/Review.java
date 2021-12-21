@@ -1,5 +1,8 @@
 package com.example.stoinformationsystem.entity;
 
+import com.example.stoinformationsystem.repository.Collection;
+import com.example.stoinformationsystem.repository.Iterator;
+
 import javax.persistence.*;
 
 @Entity
@@ -57,5 +60,6 @@ public class Review {
     public void setIdSTO(Integer idSTO) {
         this.idSTO = idSTO;
     }
+
 }
 

@@ -33,6 +33,9 @@ public class InformationSystemApplication implements CommandLineRunner {
     @Autowired
     STORepository stoRepository;
 
+//    @Autowired
+//    Iterator iterator;
+
     @Override
     public void run(String... args) throws Exception {
 //        LocalTime time1 = LocalTime.of(8, 30);
@@ -44,14 +47,18 @@ public class InformationSystemApplication implements CommandLineRunner {
 //
 //        ServiceInfo serviceInfo = new ServiceInfo("Mazda, Toyota, Audi",  "Технічний огляд, Комп'ютерна діагностика, Заміна масла", "Автомийка");
 //
-//        Review review = new Review();
-//        List<Review> reviews = List.of(review);
+//        Rating rat1 = new Rating(4, 5, 5);
+//        Rating rat2 = new Rating(5, 5, 5);
+//        Rating rat3 = new Rating(2, 3, 4);
+//        Review rev1 = new Review("Хороша якість обслуговування", rat1, 15);
+//        Review rev2 = new Review("Все супер! Швидко та якісно!", rat2, 15);
+//        Review rev3 = new Review("Ціна висока.", rat3, 15);
+//        List<Review> reviews = List.of(rev1, rev2, rev3);
 //
 //        Location location = new Location("Київська", "Нагорна", "47", "Київ" );
 //        List<Location> locations = List.of(location);
 //
-//        STO sto1 = new STO("Автоцентр", "Професійне технічне обслуговування", schedule, serviceInfo, locations, reviews, 1);
-//
+//        STO sto1 = new STO("CarService", "Швидко та надійно", schedule, serviceInfo, locations, reviews, 1);
 //        stoRepository.save(sto1);
 
 //          STO sto = stoRepository.getById(6);
@@ -62,10 +69,18 @@ public class InformationSystemApplication implements CommandLineRunner {
 //          reviewRepository.save(rev);
 //          List<Review> revs = List.of(rev);
 //          sto.setReviews(revs);     ????????
-
+//
 //        Review rev2 = reviewRepository.getById(5);
 //        Rating rat2 = new Rating();
 //        rev2.setRating(rat2);
 
+
+//        STO sto =  stoRepository.getById(15);
+//        Iterator iterator = sto.getIterator();
+//
+//        System.out.println(sto.getName() + " list reviews: ");
+//        while (iterator.hasNext()) {
+//            System.out.println(iterator.next());
+//        }
     }
 }
